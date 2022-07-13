@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Home Page</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <style>
+        nav {display: inline;}
+    </style>
+</head>
+<body>
+    <header>
+        <canvas id="logo">Site Logo</canvas>
+        <script>
+            const c = document.getElementById("logo");
+            const ctx = c.getContext("2d");
+            ctx.beginPath();
+            ctx.arc(100, 75, 50, 0, 2 * Math.PI);
+            ctx.stroke();
+        </script>
+        <nav>
+            <a href="about.html">About Me</a>
+            <a href="education.html">Education</a>
+            <a href="work.html">Work and Experience</a>
+            <a href="projects.html">Projects</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Projects</h1>
+        <h3>App</h3>
+        <p>
+            2022
+            <br />
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Morbi sed euismod felis. Vivamus hendrerit et magna sed faucibus.
+             Maecenas congue libero at odio semper, quis eleifend ipsum dictum. 
+        </p>
+        <iframe width="560" height="315" 
+        src="https://www.youtube.com/embed/SAL2JZxpoGY" 
+        title="YouTube video player" frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+        </iframe>
+    </main>
+</body>
+</html>

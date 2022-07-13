@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Home Page</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <style>
+        nav {display: inline;}
+    </style>
+</head>
+<body>
+    <header>
+        <canvas id="logo">Site Logo</canvas>
+        <script>
+            const c = document.getElementById("logo");
+            const ctx = c.getContext("2d");
+            ctx.beginPath();
+            ctx.arc(100, 75, 50, 0, 2 * Math.PI);
+            ctx.stroke();
+        </script>
+        <nav>
+            <a href="about.html">About Me</a>
+            <a href="education.html">Education</a>
+            <a href="work.html">Work and Experience</a>
+            <a href="projects.html">Projects</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Work and Experience</h1>
+        <h3>Tutor</h3>
+        <p>
+            2017-Present
+            <br />
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Morbi sed euismod felis. Vivamus hendrerit et magna sed faucibus.
+            Maecenas congue libero at odio semper, quis eleifend ipsum dictum. 
+            <br />
+            <strong>Impact:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+        <figure>
+            <img src="images/cat.png" alt="working with students" height="300px" width="300px">
+            <figcaption>Working with students</figcaption>
+        </figure>
+    </main>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Home Page</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <style>
+        nav {display: inline;}
+    </style>
+</head>
+<body>
+    <header>
+        <canvas id="logo">Site Logo</canvas>
+        <script>
+            const c = document.getElementById("logo");
+            const ctx = c.getContext("2d");
+            ctx.beginPath();
+            ctx.arc(100, 75, 50, 0, 2 * Math.PI);
+            ctx.stroke();
+        </script>
+        <nav>
+            <a href="about.html">About Me</a>
+            <a href="education.html">Education</a>
+            <a href="work.html">Work and Experience</a>
+            <a href="projects.html">Projects</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Angelica Consengco</h1>
+        <pre> 
+        <i>Value-driven computer engineering graduate with a comprehensive education 
+        and fundamental knowledge of software design and development.</i>
+
+
+        Open to work!
+        </pre>
+        <div>
+            <h2>Contact Info</h2>
+            <hr />
+            <p><b>Phone: </b>555-555-555</p>
+            <p><b>Email: </b>ac@email.com</p>
+            <p>
+                <svg width="20px" height="20px"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 384 512">
+                <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                <path d="M168.3 499.2C116.1 435 0 279.4 0 192C0 85.96 85.96 0 192 0C298 0 384 85.96 384 192C384 279.4 267 435 215.7 499.2C203.4 514.5 180.6 514.5 168.3 499.2H168.3zM192 256C227.3 256 256 227.3 256 192C256 156.7 227.3 128 192 128C156.7 128 128 156.7 128 192C128 227.3 156.7 256 192 256z"/>
+                </svg>
+                San Diego, CA
+            <p>
+            <h3>Or drop me a message in the form below!</h3>
+            <form action="httpbin.org/" method="POST">
+                <label for="name">Name:
+                    <input type="text" name="name" id="name" />
+                </label>
+                <label for="reason">Reason:
+                    <select name="name" id="name">
+                        <option value="recruitment">Recruitment</option>
+                        <option value="collaboration">Collaboration</option>
+                        <option value="other">Other</option>
+                    </select>
+                <br />
+                </label>
+                <label for="subject">Subject:
+                    <input type="text" name="subject" id="subject" maxlength="50" />
+                </label>
+                <br />
+                <label for="message">Message:
+                    <textarea name="message" id="message"></textarea>
+                </label>
+                <br />
+                <button type="button">Send!</button>
+
+        </div>
+    </main>
+    <footer>&copy;2022</footer>
+</body>
+</html>
