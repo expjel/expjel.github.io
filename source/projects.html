@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Home Page</title>
+    <link rel="stylesheet" href="styles/projects.css" type="text/css">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <style>
         nav {display: inline;}
@@ -10,37 +12,42 @@
 </head>
 <body>
     <header>
-        <canvas id="logo">Site Logo</canvas>
-        <script>
-            const c = document.getElementById("logo");
-            const ctx = c.getContext("2d");
-            ctx.beginPath();
-            ctx.arc(100, 75, 50, 0, 2 * Math.PI);
-            ctx.stroke();
-        </script>
+        <a href="../index.html">
+        <img src="../logo.png" alt="logo" title="homepage"></a>
         <nav>
-            <a href="about.html">About Me</a>
-            <a href="education.html">Education</a>
-            <a href="work.html">Work and Experience</a>
-            <a href="projects.html">Projects</a>
+            <ul id="nav-container">
+                <li><a href="about.html">About</a></li>
+                <li><a href="work.html">Work & Experience</a></li>
+                <li><a href="projects.html">Projects</a></li>
+            </ul>
         </nav>
     </header>
     <main>
         <h1>Projects</h1>
-        <h3>App</h3>
-        <p>
-            2022
-            <br />
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-            Morbi sed euismod felis. Vivamus hendrerit et magna sed faucibus.
-             Maecenas congue libero at odio semper, quis eleifend ipsum dictum. 
-        </p>
-        <iframe width="560" height="315" 
-        src="https://www.youtube.com/embed/SAL2JZxpoGY" 
-        title="YouTube video player" frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-        allowfullscreen>
-        </iframe>
+        <section>
+            <h3>JOT App</h3>
+            <div id="project-description">
+            <p>JOT is a daily bullet-journaling app targeting high-school end users, developed as part of
+                a senior project for the Advanced Software Engineering course at UCSD.</p>
+            <ul>As a <em>UX Lead/Front End Developer</em> on this project, I:
+                <li>Designed and developed HTML custom components and implemented functionality using JavaScript for MVP   
+                    the following features: creating and editing notes, customizing bullets, and typing a journal entry</li>
+                <li>Applied user-centered design thinking, agile development, test-driven development, CI/CD, integration         
+                    and E2E testing</li>
+                <li>Delivered a stable release in under 3-months</li>
+            </ul>
+        </div>
+        <div id="project-demo">
+            <video controls>
+                <source src="videos/jot-demo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        </section>
     </main>
+    <footer>
+        <span id="email">email: expjel@gmail.com</span>
+        <span id="linkedin">connect: <a href="https://www.linkedin.com/in/angelica-consengco">linkedin</a></span>
+    </footer>
 </body>
 </html>

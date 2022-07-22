@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Home Page</title>
+    <link rel="stylesheet" href="styles/work.css" type="text/css">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <style>
         nav {display: inline;}
@@ -10,37 +12,52 @@
 </head>
 <body>
     <header>
-        <canvas id="logo">Site Logo</canvas>
-        <script>
-            const c = document.getElementById("logo");
-            const ctx = c.getContext("2d");
-            ctx.beginPath();
-            ctx.arc(100, 75, 50, 0, 2 * Math.PI);
-            ctx.stroke();
-        </script>
+        <a href="../index.html">
+            <img src="../logo.png" alt="logo" title="homepage"></a>
         <nav>
-            <a href="about.html">About Me</a>
-            <a href="education.html">Education</a>
-            <a href="work.html">Work and Experience</a>
-            <a href="projects.html">Projects</a>
+            <ul id="nav-container">
+                <li><a href="about.html">About</a></li>
+                <li><a href="work.html">Work & Experience</a></li>
+                <li><a href="projects.html">Projects</a></li>
+            </ul>
         </nav>
     </header>
     <main>
         <h1>Work and Experience</h1>
-        <h3>Tutor</h3>
-        <p>
-            2017-Present
-            <br />
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-            Morbi sed euismod felis. Vivamus hendrerit et magna sed faucibus.
-            Maecenas congue libero at odio semper, quis eleifend ipsum dictum. 
-            <br />
-            <strong>Impact:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        </p>
-        <figure>
-            <img src="images/cat.png" alt="working with students" height="300px" width="300px">
-            <figcaption>Working with students</figcaption>
-        </figure>
+        <section>
+            <h3>STEM Tutor at Citrus College</h3>
+            <p>Since Spring 2017, I have been a tutor for community college students
+                taking upper-divison mathematics and physics courses. I now work remotely where I conduct 1-1 and group
+                sessions to help improve student learning and success in class. I also mentor students
+                to help build good study habits and academic confidence. I enjoy working with students
+                and deeply care about their success, and being in a position to help others grow and learn
+                is very rewarding. 
+            </p>
+        </section>
+        <section id="nasa-sl">
+            <h3>2018 NASA Student Launch</h3>
+            <p>The NASA Student Launch is a rigorous, 8-month long high-powered rocketry 
+            competition among colleges and universities.</p>
+            <div id="image-container">
+                <figure>
+                    <img src="images/uav.jpeg" alt="explaining UAV design">
+                    <figcaption>Presenting UAV design at competition conference</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/rocketowls.jpeg" alt="rocket owls team">
+                    <figcaption>The Rocket Owls with our rocket Athena</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/rocket.jpeg" alt="rocket launch">
+                    <figcaption>Competition day launch at Marshall Space Flight Center in 
+                        Huntsville, AL</figcaption>
+                </figure>
+            </div>
+        </section>
     </main>
+    <footer>
+        <span id="email">email: expjel@gmail.com</span>
+        <span id="linkedin">connect: <a href="https://www.linkedin.com/in/angelica-consengco">linkedin</a></span>
+    </footer>
 </body>
 </html>

@@ -1,0 +1,114 @@
+@import 'root.css';
+@import 'header.css';
+
+@keyframes pulse {
+    from {
+        transform: scale3d(1, 1, 1);
+      }
+    
+      50% {
+        transform: scale3d(1.05, 1.05, 1.05);
+      }
+    
+      to {
+        transform: scale3d(1, 1, 1);
+    }
+}
+body {
+    overflow: auto;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: stretch;
+}
+
+#name {
+    box-sizing: border-box;
+    font-size: var(--header-size);
+    font-family: var(--header-font);
+    border-bottom: solid var(--raspberry);
+    margin-bottom: 48px;
+    margin-top: 30px;
+}
+
+#bio-wrapper {
+    box-sizing: border-box;
+    max-width: 80%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    align-content: center;
+    background-color: var(--light-gray);
+}
+
+#values-wrapper {
+    box-sizing: border-box;
+    max-width: 80%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin-top: 20px;
+    background-color: var(--light-gray);
+}
+
+#hand {
+    position: absolute;
+    bottom: 1em;
+    right: 1em;
+}
+
+#bio-wrapper p {
+    flex:1;
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 2.3em;
+    font-family: var(--body-font);
+    padding: 0.8em;
+    margin: 0;
+}
+
+#values-wrapper p {
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 2.3em;
+    font-family: var(--body-font);
+    padding: 0.8em;
+    margin: 0;
+}
+
+#contact-wrapper {
+    display: flex;
+    box-sizing: border-box;
+    flex-flow: row wrap;
+    max-width: 80%;
+    width: 80%;
+    font-family: var(--header-font);
+    font-size: 2.3em;
+    margin-top: 45px;
+    margin-bottom: auto;
+    justify-content: space-between;
+}
+
+#contact-wrapper hr {
+    border: none;
+    margin:0;
+    width: 100%;
+}
+#contact-title {
+    border-bottom: solid var(--raspberry);
+}
+#linkedin a {
+    text-decoration: none;
+    color: black;
+}
+#linkedin a:hover {
+    text-decoration: underline;
+    color: var(--accent-color);
+    font-style: italic;
+}

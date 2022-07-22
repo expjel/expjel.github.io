@@ -1,0 +1,45 @@
+@import 'root.css';
+@import 'header.css';
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section {
+    font-family: var(--body-font);
+    font-size: 1.2em;
+}
+h1 {
+    box-sizing: border-box;
+    font-size: var(--header-size);
+    font-family: var(--header-font);
+    border-bottom: solid var(--raspberry);
+    margin-bottom: 48px;
+    margin-top: 30px;
+}
+
+h3 {
+    width: 80%;
+    box-sizing: border-box;
+    font-size: 2em;
+    font-family: var(--header-font);
+}
+
+#project-demo {
+    width: 100% !important;
+    height: auto !important;
+}
+
+footer {
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    margin-top: 45px;
+    margin-bottom: auto;
+    width: 100%;
+    font-family: var(--header-font);
+}

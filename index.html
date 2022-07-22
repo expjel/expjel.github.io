@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Home Page</title>
+    <link rel="stylesheet" href="source/styles/main.css" type="text/css">
     <link rel="icon" type="image/x-icon" href="source/images/favicon.ico">
     <style>
         nav {display: inline;}
@@ -10,69 +12,47 @@
 </head>
 <body>
     <header>
-        <canvas id="logo">Site Logo</canvas>
-        <script>
-            const c = document.getElementById("logo");
-            const ctx = c.getContext("2d");
-            ctx.beginPath();
-            ctx.arc(100, 75, 50, 0, 2 * Math.PI);
-            ctx.stroke();
-        </script>
+        <a href="index.html">
+        <img src="logo.png" alt="logo" title="homepage"></a>
         <nav>
-            <a href="source/about.html">About Me</a>
-            <a href="source/education.html">Education</a>
-            <a href="source/work.html">Work and Experience</a>
-            <a href="source/projects.html">Projects</a>
+            <ul id="nav-container">
+                <li><a href="source/about.html">About</a></li>
+                <li><a href="source/work.html">Work & Experience</a></li>
+                <li><a href="source/projects.html">Projects</a></li>
+            </ul>
         </nav>
     </header>
     <main>
-        <h1>Angelica Consengco</h1>
-        <pre> 
-        <i>Value-driven computer engineering graduate with a comprehensive education 
-        and fundamental knowledge of software design and development.</i>
-
-
-        Open to work!
-        </pre>
-        <div>
-            <h2>Contact Info</h2>
-            <hr />
-            <p><b>Phone: </b>555-555-555</p>
-            <p><b>Email: </b>ac@email.com</p>
+        <h1 id="name">Angelica Consengco</h1>
+        <div id="bio-wrapper">
             <p>
-                <svg width="20px" height="20px"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 384 512">
-                <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
-                <path d="M168.3 499.2C116.1 435 0 279.4 0 192C0 85.96 85.96 0 192 0C298 0 384 85.96 384 192C384 279.4 267 435 215.7 499.2C203.4 514.5 180.6 514.5 168.3 499.2H168.3zM192 256C227.3 256 256 227.3 256 192C256 156.7 227.3 128 192 128C156.7 128 128 156.7 128 192C128 227.3 156.7 256 192 256z"/>
+                Welcome! I’m a recent computer engineering graduate with practical knowledge
+                in user-design and software development.
+                <br /><br />
+                I am currently looking for a position as an entry-level developer. &nbsp;
+            </p>
+            <svg id="hand" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_43_23)">
+                <path d="M21.679 21.1612L17.2596 25.5806M21.679 21.1612L32.2856 10.5546C33.7501 9.09009 36.1245 9.09009 37.5889 10.5546C39.0534 12.019 39.0534 14.3934 37.5889 15.8579M21.679 21.1612C23.1435 19.6967 23.1435 17.3223 21.679 15.8579C20.2145 14.3934 17.8402 14.3934 16.3757 15.8579L12.8402 19.3934C5.51785 26.7157 5.51785 38.5876 12.8402 45.9099C20.1625 53.2322 32.0344 53.2322 39.3567 45.9099L48.1955 37.0711C49.66 35.6066 49.66 33.2322 48.1955 31.7678C46.7311 30.3033 44.3567 30.3033 42.8922 31.7678M37.5889 15.8579L27.8662 25.5806M37.5889 15.8579L39.3567 14.0901C40.8212 12.6256 43.1955 12.6256 44.66 14.0901C46.1245 15.5546 46.1245 17.9289 44.66 19.3934L42.8922 21.1612M42.8922 21.1612L33.1695 30.8839M42.8922 21.1612C44.3567 19.6967 46.7311 19.6967 48.1955 21.1612C49.66 22.6256 49.66 25 48.1955 26.4645L42.8922 31.7678M42.8922 31.7678L38.4728 36.1872" stroke="#111827" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_43_23">
+                <rect width="60" height="60" fill="white"/>
+                </clipPath>
+                </defs>
                 </svg>
-                San Diego, CA
+        </div>
+        <div id="values-wrapper">
             <p>
-            <h3>Or drop me a message in the form below!</h3>
-            <form action="httpbin.org/" method="POST">
-                <label for="name">Name:
-                    <input type="text" name="name" id="name" />
-                </label>
-                <label for="reason">Reason:
-                    <select name="name" id="name">
-                        <option value="recruitment">Recruitment</option>
-                        <option value="collaboration">Collaboration</option>
-                        <option value="other">Other</option>
-                    </select>
-                <br />
-                </label>
-                <label for="subject">Subject:
-                    <input type="text" name="subject" id="subject" maxlength="50" />
-                </label>
-                <br />
-                <label for="message">Message:
-                    <textarea name="message" id="message"></textarea>
-                </label>
-                <br />
-                <button type="button">Send!</button>
-
+                I value <em>communication, learning, and simplicity.</em>
+            </p>
+        </div>
+        <div id="contact-wrapper">
+            <span id="contact-title">contact</span>
+            <hr />
+            <span id="email">email: expjel@gmail.com</span>
+            <span id="linkedin">connect: <a href="https://www.linkedin.com/in/angelica-consengco">linkedin</a></span>
         </div>
     </main>
-    <footer>&copy;2022</footer>
 </body>
 </html>

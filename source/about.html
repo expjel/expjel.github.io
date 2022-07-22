@@ -2,113 +2,96 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>About Me</title>
+    <link rel="stylesheet" href="styles/about.css" type="text/css">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <style>
-        nav {display: inline;}
-    </style>
 </head>
 <body>
     <header>
-        <canvas id="logo">Site Logo</canvas>
-        <script>
-            const c = document.getElementById("logo");
-            const ctx = c.getContext("2d");
-            ctx.beginPath();
-            ctx.arc(100, 75, 50, 0, 2 * Math.PI);
-            ctx.stroke();
-        </script>
+        <a href="../index.html">
+        <img src="../logo.png" alt="logo" title="homepage"></a>
         <nav>
-            <a href="about.html">About Me</a>
-            <a href="education.html">Education</a>
-            <a href="work.html">Work and Experience</a>
-            <a href="projects.html">Projects</a>
+            <ul id="nav-container">
+                <li><a href="about.html">About</a></li>
+                <li><a href="work.html">Work & Experience</a></li>
+                <li><a href="projects.html">Projects</a></li>
+            </ul>
         </nav>
     </header>
     <main>
-        <h1>About Me</h1>
-        <section>
-            <img src="images/cat.png" alt="headshot" height="250px" width="250px">
-            <h3>Background</h3>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi 
-                sed euismod felis. Vivamus hendrerit et magna sed faucibus. Maecenas
-                congue libero at odio semper, quis eleifend ipsum dictum. Vestibulum 
-                sed ligula massa. Aenean faucibus metus in nulla tincidunt sodales. 
-                Fusce quis eros quis odio sollicitudin vestibulum. Sed sit amet diam 
-                ut sem ullamcorper hendrerit. Duis dictum blandit enim, pulvinar condimentum
-                neque facilisis eu. Duis at pellentesque ligula. Fusce vel urna tristique risus
-                accumsan congue eget sed nulla. Fusce tempor purus a dolor congue, sed commodo 
-                metus mattis.
-            </p>
-            <p>
-                <strong>Interests: </strong>Software Development, Operating Systems,
-                 Machine Learning
-            </p>
-            <h3>Skills</h3>
-            <div>
-                <span>Languages <em>(in order of proficiency):</em>
-                    <ol>
-                        <li>Java</li>
-                        <li>Python</li>
-                        <li>C++</li>
-                        <li><code>HTML/CSS/Javascript</code></li>
-                    </ol>
+        <h1>About</h1>
+        <h3>Background</h3>
+        <section id="bio">
+            <img src="images/headshot.jpeg" alt="headshot">
+            <div id="bio-wrapper">
+                <span id="location-container">
+                    <svg id="location-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.6569 16.6569C16.7202 17.5935 14.7616 19.5521 13.4138 20.8999C12.6327 21.681 11.3677 21.6814 10.5866 20.9003C9.26234 19.576 7.34159 17.6553 6.34315 16.6569C3.21895 13.5327 3.21895 8.46734 6.34315 5.34315C9.46734 2.21895 14.5327 2.21895 17.6569 5.34315C20.781 8.46734 20.781 13.5327 17.6569 16.6569Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M15 11C15 12.6569 13.6569 14 12 14C10.3431 14 9 12.6569 9 11C9 9.34315 10.3431 8 12 8C13.6569 8 15 9.34315 15 11Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                San Diego, CA     
                 </span>
-                <span>Tools:
-                    <ul>
-                        <li>VS Code</li>
-                        <li>Git</li>
-                    </ul>
-                </span>
-                <span>
-                    <ul>
-                        <li>UI/UX Design</li>
-                        <li>Testing</li>
-                        <li>Agile Development</li>
-                        <li>Technical Writing</li>
-                        <li>Threat Modeling</li>
-                    </ul>
-                </span>
+                <p>
+                    As an undergraduate, I have practiced a breadth of skills with projects in
+                    <em>algorithms and DS, OS, ML, processor design and implementation, digital and
+                    analog systems, and computer security </em> to name a few I take interest in. But my
+                    senior year, I came to love the process of  <em>software development</em> — working as
+                    a team, the empathy it takes to think about users, and the innovation of simple
+                    solutions. I look forward to a career where I am driven by these values and also
+                    the challenges that come with upholding them. My current goal as an entry-level
+                    dev is to find my place in the industry doing good work with good people — see ya soon!
+                    </p>
             </div>
         </section>
-        <section>
-            <h3>Personal Q&A</h3>
-            <details>
-                <summary>Question: Lorem ipsum dolor sit amet?</summary>
-                <picture>
-                    <source srcset="images/cat.png" media="(min-width: 20px)">
-                    <img src="images/cat.png" alt="cat">
-                </picture>
-                <p>Morbi sed euismod felis. Vivamus hendrerit et magna sed faucibus. 
-                    Maecenas congue libero at odio semper, quis eleifend ipsum dictum. 
-                </p>
-            </details>
-            <details>
-                <audio controls>
-                    <source src="audio/cat.mp3" type="audio/mpeg">
-                    Your browser does not support the audio tag.
-                </audio>
-                <summary>Question: Lorem ipsum dolor sit amet?</summary>
-                <p>Morbi sed euismod felis. Vivamus hendrerit et magna sed faucibus. 
-                    Maecenas congue libero at odio semper, quis eleifend ipsum dictum. 
-                </p>
-            </details>
-            <details>
-                <video width="420px" height="340px" controls>
-                    <source src="videos/cat.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <summary>Question: Lorem ipsum dolor sit amet?</summary>
-                <p>Morbi sed euismod felis. Vivamus hendrerit et magna sed faucibus. 
-                    Maecenas congue libero at odio semper, quis eleifend ipsum dictum. 
-                </p>
-            </details>
+        <h3>Education</h3>
+        <section id="education">
+            <div class="education-container">
+                <span class="degree-name"><em>B.S. Computer Engineering</em></span>
+                <span class="school-name">University of California, San Diego</span>
+                <span class="school-year">September 2019 - June 2022</span>
+            </div>
+                <details>
+                    <summary>Relevant Coursework</summary>
+                    <p id="courses">Object-Oriented Programming, Data Structures, Algorithms, Discrete Mathematics, 
+                        Operating Systems, Computer Security, Computer Architecture, Digital Systems and    
+                        Logic, Machine Learning and AI, Advanced Software Engineering
+                     </p>
+                </details>
+            <div class="education-container">
+                <span class="degree-name"><em>A.S for Transfer</em></span>
+                <span class="school-name">Citrus College</span>
+                <span class="school-year">August 2017 - June 2019</span>
+            </div>
+        </section>
+        <h3>Skills</h3>
+        <section id="skills">
+            <ul id="languages">
+                Languages
+                <li>Java</li>
+                <li>Python</li>
+                <li>C++</li>
+                <li><code>HTML/CSS/Javascript</code></li>
+                <li>System Verilog</li>
+            </ul>
+            <ul id="tools">Tools
+                <li>VS Code</li>
+                <li>Git</li>
+                <li> Node.js</li>
+                <li>Figma</li>
+            </ul>
+            <ul id="practical-skills">Practical
+                <li>UI/UX Design</li>
+                <li>Testing</li>
+                <li>Agile Development</li>
+                <li>Technical Writing & Documentation</li>
+                <li>Threat Modeling</li>
+            </ul>
         </section>
     </main>
-    <footer>&copy;2022
-        You found the secret site survey!
-        <a href="survey.html">Click me</a>
+    <footer>
+        <span id="email">email: expjel@gmail.com</span>
+        <span id="linkedin">connect: <a href="https://www.linkedin.com/in/angelica-consengco">linkedin</a></span>
     </footer>
 </body>
 </html>

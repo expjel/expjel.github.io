@@ -1,0 +1,79 @@
+@import 'root.css';
+header {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+
+#logo {
+    height: auto;
+    width: auto;
+}
+
+nav {
+    box-sizing: border-box;
+    width: 60vw;
+    margin-left: 35px;
+}
+
+#nav-container li {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+#nav-container {
+    flex: 1;
+    padding-left: 55px;
+    padding-right: 55px;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: linear-gradient(90.03deg, #6FBAEC 19.39%, #A5D5F3 28.05%, #A5CCF3 64.01%, #A5B3F3 76.14%);
+    border-radius: var(--rounded-rect);
+}
+
+#nav-container a {
+    font-size: 1.5em;
+    font-family: var(--italic-header-font);
+    text-decoration: none;
+    color: black;
+}
+
+#nav-container li:hover {
+    animation: pulse 1s;
+}
+
+@media screen and (min-width: 650px) and (max-width: 900px) {
+    #nav-container a {
+        font-size: 1em;
+    }
+    #nav-container {
+        font-size: 1em;
+    }
+}
+@media screen and (max-width: 649px) {    
+    #nav-container li:after {
+        content: "   ›";
+    }
+    #nav-container {
+        justify-content: center;
+        margin: 0;
+        padding: 5px 5px 5px 5px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        width: 100px;
+        height: 100px;
+        list-style: none;
+        background: var(--accent-color);
+        border-radius: var(--rounded-rect);
+    }
+    
+    #nav-container a {
+        font-size: 0.8em;
+        font-family: var(--italic-header-font);
+        text-decoration: underline;
+        color: black;
+    }
+    
+}

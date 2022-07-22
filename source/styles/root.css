@@ -1,0 +1,30 @@
+@font-face {
+    font-family: 'Apercu Pro Regular';
+    src: url('fonts/apercu-pro-regular.otf');
+}
+@font-face {
+    font-family: 'Apercu Pro Medium Italic';
+    src: url('fonts/apercu-pro-medium-italic.otf');
+}
+@font-face {
+    font-family: 'Helvetica Neue Light';
+    src: url('fonts/helvetica-neue-light.ttf');
+}
+
+body {
+    background-color: var(--background-color);
+}
+:root {
+    /* Colors */
+    --background-color: #f4f5f4;
+    --raspberry: #ec0960;
+    --light-gray: #d9d9d9;
+    --accent-color: #6fbaec;
+    /* Fonts and sizes */
+    --header-font: 'Apercu Pro Regular', 'Helvetica', 'sans-serif';
+    --italic-header-font: 'Apercu Pro Medium Italic', 'Helvetica', 'sans-serif';
+    --body-font: 'Helvetica Neue Light', 'Helvetica', 'sans-serif';
+    --header-size: 4em;
+    /* Rounded edges */
+    --rounded-rect: 10px;
+}
