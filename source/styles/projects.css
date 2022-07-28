@@ -10,6 +10,7 @@ main {
 section {
     font-family: var(--body-font);
     font-size: 1.2em;
+    padding: 1em;
 }
 h1 {
     box-sizing: border-box;
@@ -28,8 +29,17 @@ h3 {
 }
 
 #project-demo {
-    width: 100% !important;
-    height: auto !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 800px;
+    min-width: 400px;
+    margin: auto;
+}
+
+.video {
+    width: 100%;
+    height: auto;
 }
 
 footer {

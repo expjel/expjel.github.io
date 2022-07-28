@@ -163,8 +163,8 @@ function renderPost(postId, post) {
 
 function editPost(event) {
     console.log(`edit post`);
-    event.target.style.display = 'none';
-    const postToEdit = event.target.parentElement;
+    event.currentTarget.style.display = 'none';
+    const postToEdit = event.currentTarget.parentElement;
     const saveBtn = postToEdit.querySelector(`#save-btn`);
     saveBtn.style.display = 'inline';
     const titleToEdit = postToEdit.querySelector(`#blog-title`);
@@ -177,7 +177,7 @@ function editPost(event) {
 
 function savePost(event) {
     console.log(`save post`);
-    const postToSave = event.target.parentElement;
+    const postToSave = event.currentTarget.parentElement;
     const postId = postToSave.getAttribute('data-id');
     const editBtn = postToSave.querySelector(`#edit-btn`);
     const saveBtn = postToSave.querySelector(`#save-btn`);
@@ -199,7 +199,7 @@ function savePost(event) {
 
 function removePost(event) {
     console.log(`delete post`);
-    const postToDelete = event.target.parentElement;
+    const postToDelete = event.currentTarget.parentElement;
     const postId = postToDelete.getAttribute('data-id');
     deletePost(postId);
     postToDelete.remove();
