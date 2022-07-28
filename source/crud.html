@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Part 1</title>
+    <script type="text/javascript" src="node_modules/dompurify/dist/purify.js"></script>
+    <script type="module" src="scripts/blog.js"></script>
+    <template id="blog-post">
+        <div class="container" data-id="">
+            <h1 id="blog-title">Title</h1>
+            <p id="blog-date">Date</p>
+            <p id="blog-summary">Summary</p>
+            <button id="edit-btn">Edit</button>
+            <button id="delete-btn">Delete</button>
+            <button id ="save-btn">Save</button>
+        </div>
+    </template>
+</head>
+<body>
+    <main>
+        <h1>Blog Posts</h1>
+        <button id="add-btn">Add Post</button>
+        <section id="post-container"></section>
+        <dialog id="new-post-modal">
+            <form id="new-post-form" action="">
+                <fieldset>
+                    <legend>New Post</legend>
+                    <label for="title">Blog Title</label>
+                    <input type="text" name="title">
+                    <label for="date">Date</label>
+                    <input type="date" name="date">
+                    <label for="summary">Summary</label>
+                    <textarea name="summary" rows="3"></textarea>
+                    <input type="submit" value="Add">
+                </fieldset>
+            </form>
+        </dialog>
+    </main>
+</body>
+</html>
