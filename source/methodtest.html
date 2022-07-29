@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Part 1</title>
+</head>
+<body style="margin: 1em;">
+    <form id="article-form">
+        <fieldset style="display:inline">
+            <legend>Article Form</legend>
+            <label for="recordId">Record ID:</label>
+            <input type="number" id="recordId" name="recordId" />
+            <label for="articleName">Article Name:</label>
+            <input type="text" id="articleName" name="articleName" />
+            <label for="articleBody">Article Body:</label>
+            <textarea id="articleBody" name="articleBody"></textarea>
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" readonly />
+            <br />
+            <input type="submit" id="postBtn" value="POST" />
+            <input type="submit" id="getBtn" value="GET" />
+            <input type="submit" id="putBtn" value="PUT" />
+            <input type="submit" id="deleteBtn" value="DELETE" />
+        </fieldset>
+    </form>
+    <section>
+        <h1>Response</h1>
+        <hr />
+        <output id="response" style="white-space: pre;"></output>
+    </section>
+    <script>
+        let articleForm = document.getElementById('article-form');
+        let date = articleForm.querySelector(`#date`);
+        const currentDate = new Date();
+        let currentDateString = currentDate.toISOString().substring(0,10);
+
+        /* Set date field */
+        date.value = currentDateString;
+
+        /* Add form event listener */
+        articleForm.addEventListener('submit', (ev) => {
+
+            ev.preventDefault();
+            const buttonId = ev.submitter.id;
+            const formData = new FormData(ev.target);
+
+            if (buttonId == 'postBtn') {
+                submitRequest('POST','https://httpbin.org/post',formData);
+            }
+            if (buttonId == 'getBtn') {
+                submitRequest('GET','https://httpbin.org/get',formData);
+            }
+            if (buttonId == 'putBtn') {
+                submitRequest('PUT','https://httpbin.org/put',formData);
+            }
+            if (buttonId == 'deleteBtn') {
+                submitRequest('DELETE','https://httpbin.org/delete',formData);
+            }
+        });
+
+        function submitRequest(method, url, formData) {
+            let request = new XMLHttpRequest();
+            let responseContainer = document.getElementById('response');
+            let responseTitle = document.getElementsByTagName('h1')[0];
+            request.onreadystatechange = request.onreadystatechange = function() {
+                if (request.readyState == 4 && request.status == 200) {
+                    responseContainer.innerHTML = `<code> ${request.responseText} </code>`;
+                    responseTitle.textContent = `Response (${method})`;
+                }
+            };
+            request.open(method, url, true);
+            if (method == 'POST') {
+                request.send(formData);
+            }
+            if (method == 'GET') {
+                request.send(null);
+            }
+            if (method == 'PUT') {
+                request.setRequestHeader('Content-Type','text/html');
+                request.send('&lt;p&gt;Hello World&lt;/p&gt;');
+            }
+            if (method == 'DELETE') {
+                request.send(null);
+            }
+        }
+    </script>
+</body>
+</html>
