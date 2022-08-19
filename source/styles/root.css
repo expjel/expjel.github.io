@@ -10,16 +10,43 @@
     font-family: 'Helvetica Neue Light';
     src: url('fonts/helvetica-neue-light.ttf');
 }
+@font-face {
+    font-family: 'Helvetica Neue Medium';
+    src: url('fonts/helvetica-neue-medium.ttf');
+}
+@font-face {
+    font-family: 'Helvetica Neue Roman';
+    src: url('fonts/helvetica-neue-roman.ttf');
+}
+@keyframes pulse {
+    from {
+        transform: scale3d(1, 1, 1);
+      }
+    
+      50% {
+        transform: scale3d(1.05, 1.05, 1.05);
+      }
+    
+      to {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
 
 body {
     background-color: var(--background-color);
 }
+
 :root {
     /* Colors */
     --background-color: #f4f5f4;
     --raspberry: #ec0960;
     --light-gray: #d9d9d9;
     --accent-color: #6fbaec;
+    --active-link: #298bca;
     /* Fonts and sizes */
     --header-font: 'Apercu Pro Regular', 'Helvetica', 'sans-serif';
     --italic-header-font: 'Apercu Pro Medium Italic', 'Helvetica', 'sans-serif';

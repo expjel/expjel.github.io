@@ -2,18 +2,14 @@
 @import 'header.css';
 
 main {
+    margin: auto;
     display: flex;
     flex-direction: column;
+    -gap: 2em;
     align-items: center;
 }
 
-section {
-    font-family: var(--body-font);
-    font-size: 1.2em;
-    padding: 1em;
-}
 h1 {
-    box-sizing: border-box;
     font-size: var(--header-size);
     font-family: var(--header-font);
     border-bottom: solid var(--raspberry);
@@ -23,25 +19,149 @@ h1 {
 
 h3 {
     width: 80%;
-    box-sizing: border-box;
+    -margin-bottom: 1em;
     font-size: 2em;
     font-family: var(--header-font);
 }
 
-#project-demo {
+h3:first-of-type {
+    margin-top: 0;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.8em 2em;
+    justify-content: center;
+    width: 80%;
+    font-size: 1.5rem;
+    font-family: var(--body-font);
+    line-height: 1.5;
+}
+
+#jot-demo {
     display: flex;
     justify-content: center;
-    align-items: center;
-    max-width: 800px;
-    min-width: 400px;
-    margin: auto;
+    min-width: 300px;
+    max-width: 320px;
+    max-height: 700px;
+    flex: 1;
 }
 
-.video {
+video {
     width: 100%;
+    border-radius: 40px;
+    border: 10px solid black;
     height: auto;
+    object-fit: cover;
 }
 
+.project-description {
+    background-color: var(--light-gray);
+    padding: 0.8em;
+    line-height: 1.5;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.8em;
+    flex: 1;
+    -margin: auto;
+}
+
+.project-description > p {
+    margin: 0;
+}
+
+
+.project-description > span {
+    margin: 0;
+}
+
+
+.tasks-list, .awards-list {
+    padding: 0;
+    -align-self: flex-start;
+    margin: 0;
+}
+
+.tasks-list > li, .awards-list > li {
+    margin-left: 1em;
+}
+
+.skill-list {
+    display: flex;
+    -align-self: flex-end;
+    gap: 0.8em;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    list-style: none;
+    padding:0;
+    -margin-top: auto;
+    margin: 0;
+    font-size: 0.6em;
+    font-family: 'Helvetica Neue Medium';
+
+}
+
+.skill-list > li {
+    background-color: var(--raspberry);
+    border-radius: var(--rounded-rect);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5em;
+}
+
+
+a {
+    text-decoration: underline;
+    color: var(--accent-color);
+}
+
+a:visited {
+    text-decoration: underline;
+    color: var(--accent-color);
+}
+
+a:active {
+    text-decoration: underline;
+    color: var(--active-link);
+}
+
+.photo-gallery {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    /* min-width: 300px;
+    max-width: 320px;
+    max-height: 700px; */
+}
+
+.photo-gallery > img {
+    width: 200px;
+    object-fit: cover;
+    vertical-align: bottom;
+    transition: transform 0.5s;
+}
+
+.photo-gallery > img:hover {
+    transform: scale3d(1.05, 1.05, 1.05);
+}
+
+/* #github-logo {
+    background-color: var(--raspberry);
+} */
+
+#github-section {
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    background-color: var(--light-gray);
+}
 footer {
     display: flex;
     box-sizing: border-box;
@@ -52,4 +172,18 @@ footer {
     margin-bottom: auto;
     width: 100%;
     font-family: var(--header-font);
+}
+
+@media screen and (max-width: 800px) {
+    .photo-gallery {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1em;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .photo-gallery > img{
+        width: 25%;
+        -flex: 50%;
+    }
 }
