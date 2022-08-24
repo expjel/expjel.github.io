@@ -32,12 +32,18 @@
     }
 }
 
+@keyframes bounce {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+}
+
 * {
     box-sizing: border-box;
 }
 
 body {
-    background-color: var(--background-color);
+    background-color: #fff;
 }
 
 :root {
@@ -51,7 +57,7 @@ body {
     --header-font: 'Apercu Pro Regular', 'Helvetica', 'sans-serif';
     --italic-header-font: 'Apercu Pro Medium Italic', 'Helvetica', 'sans-serif';
     --body-font: 'Helvetica Neue Light', 'Helvetica', 'sans-serif';
-    --header-size: 4em;
+    --header-size: 2em;
     /* Rounded edges */
     --rounded-rect: 10px;
 }

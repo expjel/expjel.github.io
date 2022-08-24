@@ -1,0 +1,21 @@
+@import 'root.css';
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 95%;
+    border-top: 1px darkgray solid;
+    margin: auto;
+    margin-top: 5%;
+    font-family: var(--body-font);
+}
+
+footer a {
+    text-decoration: underline;
+    color: var(--accent-color);
+}
+
+footer a:active {
+    text-decoration: underline;
+    color: var(--active-link);
+}

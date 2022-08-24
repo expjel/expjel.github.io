@@ -3,39 +3,40 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Home Page</title>
+    <title>Projects</title>
     <link rel="stylesheet" href="styles/projects.css" type="text/css">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <style>
-        nav {display: inline;}
-    </style>
 </head>
 <body>
     <header>
         <a href="../index.html">
         <img src="../logo.png" alt="logo" title="homepage"></a>
         <nav>
-            <ul id="nav-container">
+            <ul>
                 <li><a href="about.html">About</a></li>
                 <li><a href="projects.html">Projects</a></li>
-                <li><a href="source/resume.html">Resume</a></li>
+                <li><a href="Angelica_Consengco_Resume.pdf">Resume</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <h1>Projects</h1>
-        <h3>JOT App</h3>
+        <h1>JOT App</h1>
         <section>
-            <div class="project-description">
             <p>JOT is a daily bullet-journaling app targeting high-school end users, developed as part of
                 a senior project for the Advanced Software Engineering course at UCSD in Spring 2022.</p>
-            <ul class="tasks-list">As a <u>UX Lead/Front End Developer</u> on this project, I:
+                <div id="jot-demo">
+                    <video controls>
+                        <source src="videos/jot-demo.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            <ul class="tasks-list">As a <span>UX Lead/Front End Developer</span> on this project, I:
                 <li>Designed and developed HTML custom web components and implemented functionality using JavaScript for MVP   
                     the following features: creating and editing notes, customizing bullets, and typing a journal entry</li>
                 <li>Applied user-centered design thinking, agile development, test-driven development, CI/CD, integration         
                     and E2E testing</li>
                 <li>Delivered a stable release in under 3-months and received positive feedback in project evaluation</li>
-                </ul>
+            </ul>
             <ul class="skill-list" aria-label="Relevant Skills">
                 <li>JavaScript</li>
                 <li>HTML/CSS</li>
@@ -44,39 +45,24 @@
                 <li>User-Centered Design</li>
             </ul>
         </div>
-        <div id="jot-demo">
-            <video controls>
-                <source src="videos/jot-demo.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
         </section>
-        <h3> 2018 NASA Student Launch</h3>
+        <h1> NASA Student Launch (2018-2019)</h1>
         <section>
-            <div class="project-description">
-                <p>The NASA Student Launch is a rigorous and closely collaborative 8-month long high-powered rocketry 
-                    competition among colleges and universities. Learn more about the project <a href="https://www.nasa.gov/sites/default/files/atoms/files/nsl_un_2018.pdf">here</a>!</p>
-                <ul class="tasks-list">As a <u>Payload Specialist</u> on this project, I:
-                    <li>Designed and built a custom unmanned aerial vehicle (UAV) payload that (1) deploys autonomously once the rocket lands and (2) delivers a beacon to a randomly placed target location</li>
-                    <li>Delivered over 750 pages of technical documentation over the course of the project, detailing design 
-                        and limitations, project management, and safety for review by NASA panel
-                    </li>
-                    <li>Led education engagement programs within the commmunity to fundraise entire project budget</li>
-                    <li>Completed project with a successful launch at the NASA Marshall Space Flight Center in Huntsville, AL ☺ </li>
-                </ul>
-                <p> I also managed the team's social media for the duration of the project where I created content and handled online engagement from supporters and sponsors. @rocketowls</p>
-                <ul class="awards-list">Awards:
-                    <li>1st place — Educational Engagement Award</li>
-                    <li>3rd place — Social Media Award</li>
-                </ul>
-                <ul class="skill-list" aria-label="Relevant Skills">
-                <li>Interdisciplinary Collaboration</li>
-                <li>Technical Writing & Documentation</li>
-                <li>System Testing</li>
-                <li>Prototyping</li>
-                <li>Research & Design</li>
-                </ul>
-            </div>
+            <p>The NASA Student Launch is a rigorous and closely collaborative 8-month long high-powered rocketry 
+                competition among colleges and universities. Learn more about the project <a href="https://www.nasa.gov/sites/default/files/atoms/files/nsl_un_2018.pdf">here</a>!</p>
+            <ul class="tasks-list">As a <span>Payload Specialist</span> on this project, I:
+                <li>Designed and built a custom unmanned aerial vehicle (UAV) payload that (1) deploys autonomously once the rocket lands and (2) delivers a beacon to a randomly placed target location</li>
+                <li>Delivered over 750 pages of technical documentation over the course of the project, detailing design 
+                    and limitations, project management, and safety for review by NASA panel
+                </li>
+                <li>Led education engagement programs within the commmunity to fundraise entire project budget</li>
+                <li>Completed project with a successful launch at the NASA Marshall Space Flight Center in Huntsville, AL ☺ </li>
+            </ul>
+            <p> I also managed the team's social media for the duration of the project where I created content and handled online engagement from supporters and sponsors. @rocketowls</p>
+            <ul class="awards-list">Awards:
+                <li>1st place — Educational Engagement Award</li>
+                <li>3rd place — Social Media Award</li>
+            </ul>
             <div class="photo-gallery">
                 <img src="./images/rocket-owls-logo.jpeg" alt="Rocket Owls team logo">
                 <img src="./images/rocketowls.jpeg" alt="Team photo">
@@ -84,18 +70,29 @@
                 <img src="./images/solid-works.jpeg" alt="3D UAV Solid Works rendering">
                 <img src="./images/uav.jpeg" alt="Presenting UAV at NASA SL Conference">
             </div>
+            <ul class="skill-list" aria-label="Relevant Skills">
+                <li>Interdisciplinary Collaboration</li>
+                <li>Technical Writing & Documentation</li>
+                <li>System Testing</li>
+                <li>Prototyping</li>
+                <li>Research & Design</li>
+            </ul>
         </section>
-        <h3>GitHub</h3>
-        <section id="github-section">
-                <img src="./images/github-logo.png" id="github-logo" title="@expjel's Github Profile" alt="Github Logo">
-                <p>This site was designed in Figma and developed in HTML, CSS, and native JavaScript. 
-                    Source code for this site and more projects can be found on my GitHub
-                </p>
+        <h1>GitHub</h1>
+        <section>
+            <a href="https://github.com/expjel">
+                <img src="./images/github-logo.svg" id="github-logo" title="@expjel's Github Profile" alt="Github Logo" width="100px">
+                <!-- <img src="./images/link.svg" id="link-icon" title="@expjel's Github Profile" alt="Link to github" width="15px"> -->
+            </a>
+            <p>This site was designed in Figma and developed in HTML, CSS, and native JavaScript.
+                Source code for this site and more projects can be found on my <a href="https://github.com/expjel">GitHub</a>!
+            </p>
         </section>
     </main>
     <footer>
-        <span id="email">email: expjel@gmail.com</span>
-        <span id="linkedin">connect: <a href="https://www.linkedin.com/in/angelica-consengco">linkedin</a></span>
+        <p>email: expjel AT gmail DOT com |
+            connect: <a href="https://www.linkedin.com/in/angelica-consengco">linkedin</a>
+        </p>
     </footer>
 </body>
 </html>

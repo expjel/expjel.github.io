@@ -1,5 +1,4 @@
 @import 'root.css';
-@import 'header.css';
 
 @keyframes pulse {
     from {
@@ -14,101 +13,275 @@
         transform: scale3d(1, 1, 1);
     }
 }
-body {
-    overflow: auto;
+html, body {
+    margin: 0;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
 }
 main {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
+    position: absolute;
     flex-direction: column;
     align-items: center;
-    align-content: stretch;
-}
-
-#name {
-    box-sizing: border-box;
-    font-size: var(--header-size);
-    font-family: var(--header-font);
-    border-bottom: solid var(--raspberry);
-    margin-bottom: 48px;
-    margin-top: 30px;
-}
-
-#bio-wrapper {
-    box-sizing: border-box;
-    max-width: 80%;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
     justify-content: center;
-    align-content: center;
-    background-color: var(--light-gray);
+    gap: 1em;
 }
 
-#values-wrapper {
-    box-sizing: border-box;
-    max-width: 80%;
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    margin-top: 20px;
-    background-color: var(--light-gray);
-}
-
-#hand {
-    position: absolute;
-    bottom: 1em;
-    right: 1em;
-}
-
-#bio-wrapper p {
-    flex:1;
-    box-sizing: border-box;
+p#intro {
+    -overflow: auto;
     width: 100%;
-    font-size: 2.3em;
-    font-family: var(--body-font);
-    padding: 0.8em;
-    margin: 0;
-}
-
-#values-wrapper p {
-    box-sizing: border-box;
-    width: 100%;
-    font-size: 2.3em;
-    font-family: var(--body-font);
-    padding: 0.8em;
-    margin: 0;
-}
-
-#contact-wrapper {
-    display: flex;
-    box-sizing: border-box;
-    flex-flow: row wrap;
-    max-width: 80%;
-    width: 80%;
     font-family: var(--header-font);
-    font-size: 2.3em;
-    margin-top: 45px;
-    margin-bottom: auto;
+    font-size: 2em;
+    line-height: 1.5;
+    margin: 0;
+    padding-left: 1em;
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    padding-right: 1em;
+    border-left: 5px solid;
+    border-image: linear-gradient(180deg, rgba(111,186,236,1) 16%, rgba(165,179,243,1) 74%) 4;
+}
+
+p#intro > span:first-of-type {
+    border-bottom: 2px solid var(--raspberry);
+}
+
+p#intro > span:last-of-type {
+    margin-top: 1em;
+    font-family: var(--body-font);
+    font-size: 0.7em;
+    display: block;
+}
+
+nav {
+    font-family: var(--header-font);
+    margin: 0;
+    width: 100%;
+}
+nav > ul {
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
+    gap: 1em;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
 }
 
-#contact-wrapper hr {
-    border: none;
-    margin:0;
-    width: 100%;
-}
-#contact-title {
-    border-bottom: solid var(--raspberry);
-}
-#linkedin a {
-    text-decoration: none;
+li > a {
+    display: inline-block;
+    position: relative;
     color: black;
+    text-decoration: none;
 }
-#linkedin a:hover {
-    text-decoration: underline;
+
+
+a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    background-color: var(--raspberry);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, transform 0.3s;
+    transform-origin: bottom left;
+}
+
+li > a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    opacity: 1;
+}
+
+li {
+    font-size: 2em;
+}
+
+
+details[open] {
+    position: relative;
+}
+
+details > p#contact {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    margin: 0;
+    font-family: var(--body-font);
+    text-align: left;
+    line-height: 2;
+    font-size: 0.7em;
+    white-space: nowrap;
+}
+
+details > p#contact > a {
     color: var(--accent-color);
-    font-style: italic;
+}
+
+details > p > a:active {
+    color: var(--active-link);
+}
+
+details > summary {
+    position: relative;
+    list-style-type: none;
+    padding-right: 30px;
+}
+
+details > summary:hover {
+    cursor: pointer;
+}
+
+
+summary > img {
+    display: none;
+}
+
+details[open] > summary {
+    position: relative;
+}
+
+details > summary::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80%;
+    transform: scaleX(0);
+    height: 2px;
+    margin-left: 2px;
+    background-color: var(--raspberry);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, transform 0.3s;
+    transform-origin: bottom left;
+}
+
+
+details[open] > summary::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    opacity: 1;
+}
+
+details > summary:hover::after  {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    opacity: 1;
+}
+
+details > summary:hover > img#down-arrow {
+    position: absolute;
+    padding: inherit;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -22%;
+    display: block;
+}
+
+
+details[open] > summary > img#up-arrow {
+    position: absolute;
+    padding: inherit;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -22%;
+    display: block;
+}
+
+
+details[open] > summary > img#down-arrow {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    html, body {
+        width: 100vw;
+        height: 100vh;
+        overflow-y: auto;
+    }
+    main {
+        width: 100vw;
+        height: auto;
+        top:0;
+        left:0;
+        transform: none;
+        justify-content: flex-start;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        margin-inline: auto;
+        gap: 0.5em;
+    }
+    p#intro {
+        width: 100%;
+        padding: 0.5em auto 0.5em 0.8em;
+        font-size: 1.8em;
+        margin-left: 20px;
+    }
+
+    nav {
+        width: 100%;
+        margin-inline: auto;
+        padding: auto;
+    }
+    nav > ul {
+        flex-direction: column;
+        width: 100%;
+        font-size: 1em;
+    }
+    nav > ul > li {
+        text-align: center;
+    }
+    
+    li > a {
+        border-bottom: 2px solid var(--raspberry);
+    }
+
+    details > summary > span {
+        border-bottom: 2px solid var(--raspberry);
+    }
+    details > summary {
+        position: none;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    summary > img#down-arrow {
+        position: static;
+        padding: none;
+        display: none;
+    }
+
+    details > summary:hover > img#down-arrow {
+        display: none;
+    }
+
+    details[open] > summary > img#up-arrow {
+        position: static;
+        padding-left: 5px;
+        display: block;
+        transform: none;
+
+    }
+
+    details > summary::after {
+        content: none;
+    }
+
+    details > p#contact {
+        position: static;
+        transform: none;
+        line-height: 1.5;
+        text-align: center;
+        padding: 0.5em;
+    }
+
 }
