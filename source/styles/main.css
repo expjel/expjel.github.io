@@ -244,8 +244,8 @@ details[open] > summary > img#down-arrow {
         border-bottom: 2px solid var(--raspberry);
     }
 
-    details {
-        list-style-type: none;
+    details > summary {
+        list-style: none;
     }
 
     details > summary > span {
@@ -278,6 +278,10 @@ details[open] > summary > img#down-arrow {
 
     details > summary::after {
         content: none;
+    }
+
+    li > a:hover::after {
+        transform: none;
     }
 
     details > p#contact {
