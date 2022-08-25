@@ -197,8 +197,10 @@ section#skills {
     .education-container {
         gap: 5px;
     }
-    .school-name {
+    
+    .education-container > .school-name {
         justify-content: flex-start;
+        flex-wrap: nowrap;
     }
 
     details {
