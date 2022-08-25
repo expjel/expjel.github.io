@@ -193,5 +193,6 @@ img#link-icon {
     }
     .photo-gallery > img{
         width: 100%;
+        flex: 1 0 auto;
     }
 }
