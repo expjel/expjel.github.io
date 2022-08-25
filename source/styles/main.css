@@ -244,16 +244,13 @@ details[open] > summary > img#down-arrow {
         border-bottom: 2px solid var(--raspberry);
     }
 
-    details > summary {
-        list-style: none;
-    }
-
     details > summary > span {
         border-bottom: 2px solid var(--raspberry);
     }
     details > summary {
         position: none;
         padding: 0;
+        list-style: none;
         display: flex;
         align-items: center;
         justify-content: center;
