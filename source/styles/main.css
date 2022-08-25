@@ -244,6 +244,10 @@ details[open] > summary > img#down-arrow {
         border-bottom: 2px solid var(--raspberry);
     }
 
+    details {
+        list-style-type: none;
+    }
+
     details > summary > span {
         border-bottom: 2px solid var(--raspberry);
     }

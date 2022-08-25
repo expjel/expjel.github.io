@@ -182,15 +182,16 @@ img#link-icon {
 }
 
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 600px) {
     .photo-gallery {
-        flex-direction: row;
+        display: flex;
+        flex-direction: column;
         flex-wrap: wrap;
         gap: 1em;
         align-items: center;
         justify-content: flex-start;
     }
     .photo-gallery > img{
-        width: 25%;
+        width: 100%;
     }
 }
