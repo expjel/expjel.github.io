@@ -19,3 +19,11 @@ footer a:active {
     text-decoration: underline;
     color: var(--active-link);
 }
+
+
+@media screen and (max-width: 600px) {
+    footer {
+        font-size: 0.8em;
+        justify-content: center;
+    }
+}
