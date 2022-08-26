@@ -19,7 +19,7 @@ p#values {
     margin-top: 0.67em;
     margin-bottom: 0.67em;
     font-family: var(--body-font);
-    font-size: clamp(1.3em, 2.5vw, 1.8em);
+    font-size: clamp(1.2em, 2.5vw, 1.8em);
     text-align: center;
 }
 
@@ -208,7 +208,7 @@ section#skills {
     p#values {
         width: 100%;
         margin:0;
-        white-space: pre-line;
+        text-align: left;
     }
 
     h1 {
