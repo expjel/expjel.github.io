@@ -29,7 +29,7 @@ section {
     flex-wrap: wrap;
     gap: 0.8em 2em;
     justify-content: flex-start;
-    font-size: clamp(1em, 2.5vw, 1.3em);
+    font-size: clamp(1em, 3vw, 1.3em);
     font-family: var(--body-font);
     line-height: 1.5;
 }
@@ -60,7 +60,6 @@ details[open] {
 #jot-demo {
     display: flex;
     justify-content: center;
-    min-width: 300px;
     max-width: 320px;
     max-height: 700px;
     margin: auto;
@@ -97,7 +96,7 @@ video {
     flex-wrap: wrap;
     justify-content: flex-start;
     list-style: none;
-    font-size: 0.6em;
+    font-size: 0.7em;
     padding: 0;
     font-family: 'Helvetica Neue';
 }
