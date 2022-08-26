@@ -19,7 +19,7 @@ p#values {
     margin-top: 0.67em;
     margin-bottom: 0.67em;
     font-family: var(--body-font);
-    font-size: clamp(1.5em, 2.5vw, 2em);
+    font-size: clamp(1.3em, 2.5vw, 1.8em);
     text-align: center;
 }
 
@@ -135,6 +135,10 @@ details > summary {
     list-style-type: none;
 }
 
+details summary::-webkit-details-marker {
+    display:none;
+}
+
 details summary::before {
     content: '﹢';
     margin-right: 5px;
@@ -203,12 +207,15 @@ section#skills {
 
     p#values {
         width: 100%;
+        margin:0;
+        white-space: pre-line;
     }
 
     h1 {
         width: 100%;
         text-align: center;
     }
+
     section#bio {
         width: 100%;
         flex-direction: column;
