@@ -136,6 +136,10 @@ details > summary {
     padding-right: 30px;
 }
 
+details summary::-webkit-details-marker {
+    display:none;
+}
+
 details > summary:hover {
     cursor: pointer;
 }
@@ -246,10 +250,6 @@ details[open] > summary > img#down-arrow {
 
     details > summary > span {
         border-bottom: 2px solid var(--raspberry);
-    }
-
-    details summary::-webkit-details-marker {
-        display:none;
     }
 
     details > summary {
