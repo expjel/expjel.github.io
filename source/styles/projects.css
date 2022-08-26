@@ -47,6 +47,10 @@ details > summary {
     font-family: 'Helvetica Neue Medium';
 }
 
+details summary::-webkit-details-marker {
+    display:none;
+}
+
 
 details[open] {
     display: flex;

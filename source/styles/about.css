@@ -90,18 +90,32 @@ section#education {
     justify-content: center;
 }
 
-.school-name::before {
-    display: inline-block;
-    content: '⬤';
-    color: #ff9c21;
-    margin-right: 5px;
+
+.school-name > strong {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: pre;
 }
 
-.education-container:first-child > .school-name::before {
-    display: inline-block;
-    content: '⬤';
-    color: #00629b;
-    margin-right: 5px;
+.school-name > strong > span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:aqua;
+    padding-right: 5px;
+}
+
+.school-name > strong > span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:#ff9c21;
+    padding-right: 5px;
+}
+
+.education-container:first-of-type > .school-name > strong > span{
+    color:#00629b;
 }
 
 
@@ -152,7 +166,7 @@ section#skills > ul > li {
 }
 section#skills {
     width: 80%;
-    font-size: 1.3em;
+    font-size: 1.2em;
     font-family: 'Helvetica Neue Roman';
 }
 
@@ -200,21 +214,11 @@ section#skills {
     
     .education-container > .school-name {
         justify-content: flex-start;
-        -flex-wrap: nowrap;
-    }
-
-    .education-container > .school-name::before {
-        flex: 0;
-    }
-
-    .education-container > .school-name  > strong {
-        flex: 1;
     }
 
     .education-container > .school-name  > span {
-        flex: 2;
+        width: 100%;
     }
-
 
 
     details {
@@ -234,6 +238,7 @@ section#skills {
 
     section#skills {
         width: 100%;
+        font-size: 1em;
     }
 
 }
