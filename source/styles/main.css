@@ -32,10 +32,9 @@ main {
 }
 
 p#intro {
-    -overflow: auto;
     width: 100%;
     font-family: var(--header-font);
-    font-size: 2em;
+    font-size: clamp(1.5em, 2.5vw, 2em);
     line-height: 1.5;
     margin: 0;
     padding-left: 1em;
@@ -226,7 +225,6 @@ details[open] > summary > img#down-arrow {
     p#intro {
         width: 100%;
         padding: 0.5em auto 0.5em 0.8em;
-        font-size: 1.8em;
         margin-left: 20px;
     }
 
@@ -238,7 +236,7 @@ details[open] > summary > img#down-arrow {
     nav > ul {
         flex-direction: column;
         width: 100%;
-        font-size: 1em;
+        font-size: 0.8em;
     }
     nav > ul > li {
         text-align: center;
@@ -284,6 +282,7 @@ details[open] > summary > img#down-arrow {
 
     li > a:hover::after {
         transform: none;
+        opacity: 0;
     }
 
     details > p#contact {
