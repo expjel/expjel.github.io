@@ -41,8 +41,11 @@ p#intro {
     padding-top: 0.8em;
     padding-bottom: 0.8em;
     padding-right: 1em;
+    border-width: 0;
     border-left: 5px solid;
-    border-image: linear-gradient(180deg, rgba(111,186,236,1) 16%, rgba(165,179,243,1) 74%) 4;
+    border-image: linear-gradient(180deg, rgba(111,186,236,1) 16%, rgba(165,179,243,1) 74%) 0 100%;
+    /* -webkit-border-image: -webkit-linear-gradient(180deg, rgba(111,186,236,1) 16%, rgba(165,179,243,1) 74%) 5; */
+    -border-image-width: 0px 0px 0px 5px;
 }
 
 p#intro > span:first-of-type {
