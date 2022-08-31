@@ -208,7 +208,7 @@ details[open] > summary > img#down-arrow {
     html, body {
         width: 100vw;
         height: 100vh;
-        overflow-y: hidden;
+        overflow-y:scroll;
     }
     main {
         width: 100vw;
