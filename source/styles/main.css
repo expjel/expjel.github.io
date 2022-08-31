@@ -209,7 +209,7 @@ details[open] > summary > img#down-arrow {
         width: 100vw;
         height: 100vh;
         position: static;
-        -overflow: hidden;
+        overflow: auto;
         display: flex;
     }
     main {
