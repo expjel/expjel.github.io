@@ -230,6 +230,7 @@ details[open] > summary > img#down-arrow {
         width: 100%;
         padding: 0.5em auto 0.5em 0.8em;
         margin-left: 20px;
+        -webkit-border-image: -webkit-linear-gradient(180deg, rgba(111,186,236,1) 16%, rgba(165,179,243,1) 74%) 0 100%;
     }
 
     nav {
