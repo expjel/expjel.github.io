@@ -221,6 +221,7 @@ details[open] > summary > img#down-arrow {
         padding-bottom: 1em;
         margin-inline: auto;
         gap: 0.5em;
+        margin-top: 10%;
     }
     p#intro {
         width: 100%;
