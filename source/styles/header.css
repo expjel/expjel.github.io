@@ -36,8 +36,10 @@ nav > ul {
     list-style-type: none;
     font-size: clamp(1.2em, 2.5vw, 1.5em);
     font-family: var(--header-font);
+    border-width: 0;
     border-bottom: 5px solid;
     border-image: linear-gradient(90deg, rgba(111,186,236,1) 16%, rgba(165,179,243,1) 74%) 4;
+    -webkit-border-image:-webkit-linear-gradient(0deg, rgba(111,186,236,1) 16%, rgba(165,179,243,1) 74%) 100 0%;
 }
 
 nav > ul > li > a {
